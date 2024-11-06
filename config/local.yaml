@@ -1,0 +1,15 @@
+env: "local"
+
+smtp:
+  host: "mail.hosting.reg.ru"
+  port: 465
+  username: "support@dm-trade.pro"
+  password: "UJ9-EF8-9VP-ae6"
+  order_recipient: "serdfhdh@gmail.com"
+
+order_subject: "Новый заказ"
+order_template: "order_template.html"
+
+kafka:
+  bootstrap_servers: "localhost:9092"
+  topic: "orders"
