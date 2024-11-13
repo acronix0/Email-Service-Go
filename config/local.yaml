@@ -1,15 +1,17 @@
 env: "local"
 
-smtp:
+smtp_config:
   host: "mail.hosting.reg.ru"
-  port: 465
+  port: 587
   username: "support@dm-trade.pro"
   password: "UJ9-EF8-9VP-ae6"
-  order_recipient: "serdfhdh@gmail.com"
 
-order_subject: "Новый заказ"
-order_template: "order_template.html"
+order_info:
+  recipient: "serdfhdh@gmail.com"
+  subject: "Новый заказ"
+  template: "order_template.html"
 
-kafka:
-  bootstrap_servers: "localhost:9092"
-  topic: "orders"
+kafka_config:
+  bootstrap_servers: ["192.168.0.2:9092"]
+  topics: ["order","password_reset"]
+  consumer_group: "email_service"
